@@ -3,7 +3,7 @@ import { Nav } from "../components/Nav.js";
 import { MainPanier } from "../components/MainPanier.js";
 import { Footer } from "../components/Footer.js";
 import { Modal, ModalIn } from "../components/Modal.js";
-import { RemoveItemPanier, AddQuantityPanier, RemoveQuantityPanier } from "../utils/ManageOrder.js";
+import { RemoveItemPanier, AddQuantityPanier, RemoveQuantityPanier, RemoveAllProductsPanier } from "../utils/ManageOrder.js";
 
 const displayData = () => {
 
@@ -22,6 +22,7 @@ const displayData = () => {
     RemoveItemPanier();
     AddQuantityPanier();
     RemoveQuantityPanier();
+    RemoveAllProductsPanier();
 }
 
 (async () => {

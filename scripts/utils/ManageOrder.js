@@ -72,7 +72,7 @@ export const AddQuantityPanier = () => {
 }
 
 export const RemoveQuantityPanier = () => {
-    console.log('RemoveQuantityPanier');
+    // console.log('RemoveQuantityPanier');
 
     const linksIconeMinus = document.querySelectorAll('.link__icone__minus');
     linksIconeMinus.forEach((link) => {
@@ -82,9 +82,25 @@ export const RemoveQuantityPanier = () => {
             const id = link.getAttribute('data-id');
             const dataProduct = localStorage.getItem(id);
             let parseOject = JSON.parse(dataProduct);
-            parseOject.quantity = parseOject.quantity - 1;
-            const stringifyObject = JSON.stringify(parseOject);
-            setProductLocalStorage(id, stringifyObject);
+
+            if(parseOject.quantity == 1) {
+                link.classList.add('user__select');
+            } else {
+                parseOject.quantity = parseOject.quantity - 1;
+                const stringifyObject = JSON.stringify(parseOject);
+                setProductLocalStorage(id, stringifyObject);
+            }
         })
+    })
+}
+
+export const RemoveAllProductsPanier = () => {
+    console.log('RemoveAllProductsPanier');
+
+    const buttonDeleteCart = document.querySelector('.button__delete__cart');
+    buttonDeleteCart.addEventListener('click', () => {
+        // alert('test');
+
+        localStorage.clear();
     })
 }

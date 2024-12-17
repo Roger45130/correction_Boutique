@@ -57,18 +57,21 @@ export const MainPanier = () => {
 
   return `
         <main class="main__panier">
-        <h2 class="title__h2">Votre panier</h2>
-        <table class="table__order">
-        ${content}
-        <tr>
-            <td>MONTANT TOTAL</td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td>${parseFloat(montantTotal).toFixed(2)} €</td>
-        </tr>
-        </table>
-
+          <h2 class="title__h2">Votre panier</h2>
+            <table class="table__order">
+            ${content}
+            <tr>
+                <td>MONTANT TOTAL</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>${parseFloat(montantTotal).toFixed(2)} €</td>
+            </tr>
+            </table>
+            <div class="block__action__cart">
+              <a href="" class="button__delete__cart">Vider le panier</a>
+              <a href="" class="button__validate__cart">Valider la commande</a>
+            </div>
         </main>
 `;
 };
