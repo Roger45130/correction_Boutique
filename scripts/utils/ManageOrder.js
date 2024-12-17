@@ -95,7 +95,7 @@ export const RemoveQuantityPanier = () => {
 }
 
 export const RemoveAllProductsPanier = () => {
-    console.log('RemoveAllProductsPanier');
+    // console.log('RemoveAllProductsPanier');
 
     const buttonDeleteCart = document.querySelector('.button__delete__cart');
     buttonDeleteCart.addEventListener('click', () => {
